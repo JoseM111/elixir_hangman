@@ -1,18 +1,33 @@
 defmodule Hangman do
-  @moduledoc """
-  Documentation for `Hangman`.
-  """
+  # aliases
+  alias Hangman.Impl.Game
 
-  @doc """
-  Hello world.
+  # types in elixir
+  @type state ::
+          :initializing
+          | :won
+          | :lost
+          | :good_guess
+          | :bad_guess
+          | :already_used
 
-  ## Examples
+  @type tally :: %{
+          turns_left: integer,
+          game_state: state,
+          letters: list(String.t()),
+          used: list(String.t())
+        }
 
-      iex> Hangman.hello()
-      :world
+  @opaque game :: Game.t()
 
-  """
-  def hello do
-    :world
+  # def new_game do
+  #   Hangman.Impl.Game.new_game()
+  # end
+  @spec new_game() :: game
+  defdelegate new_game, to: Game
+
+  @spec make_move(game, String.t()) :: {game, tally}
+  def make_move(_game, _guess) do
+    #
   end
 end

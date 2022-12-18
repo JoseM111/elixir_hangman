@@ -195,7 +195,7 @@ String.split(sample_string, ~r/\n/, trim: true)
 
 ```elixir
 path =
-  Path.expand("./../assets", __DIR__)
+  Path.expand("../dictionary/assets", __DIR__)
   |> Path.join("words.txt")
 
 words = File.read!(path)
@@ -208,7 +208,7 @@ String.split(words, ~r/\n/, trim: true)
 ```elixir
 # Lets implement all this live
 defmodule Dictionary do
-  @words_list_path Path.expand("./../assets", __DIR__)
+  @words_list_path Path.expand("../dictionary/assets", __DIR__)
                    |> Path.join("words.txt")
 
   def word_list do

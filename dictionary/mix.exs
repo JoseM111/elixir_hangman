@@ -6,6 +6,7 @@ defmodule Dictionary.MixProject do
       app: :dictionary,
       version: "0.1.0",
       elixir: "~> 1.14",
+      elixirc_options: [debug_info: Mix.env() == :dev],
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases()
