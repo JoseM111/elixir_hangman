@@ -43,13 +43,18 @@ defmodule Hangman.Impl.Game do
   @spec make_move(Game.t(), String.t()) :: {Game.t(), Type.tally()}
   def make_move(game = %{game_state: state}, _guess)
       when state in [:won, :lost] do
-    {game, get_tally(game)}
+    game
+    |> return_with_tally()
   end
 
-  # @spec make_move(Game.t(), String.t()) :: {Game.t(), Type.tally()}
-  # def make_move(game = %{game_state: :lost}, _guess) do
-  #   {game, get_tally(game)}
-  # end
+  def make_move(game, guess) do
+    # MapSet.member?: the question mark
+    # means its a predicate? true/false
+    accept_guess(game, guess, MapSet.member?(game.used, guess))
+    |> return_with_tally()
+  end
+
+  ##############################################################
 
   defp get_tally(game) do
     %{
@@ -61,6 +66,22 @@ defmodule Hangman.Impl.Game do
         |> MapSet.to_list()
         |> Enum.sort()
     }
+  end
+
+  defp return_with_tally(game) do
+    _tally = {game, get_tally(game)}
+  end
+
+  ##############################################################
+
+  # if we already picked a letter than
+  # the thirs parameter will be true by default
+  defp accept_guess(game, _guess, _already_used = true) do
+    _updated_game_state = %{game | game_state: :already_used}
+  end
+
+  defp accept_guess(game, guess, _already_used) do
+    _used_guess = %{game | used: MapSet.put(game.used, guess)}
   end
 
   ##############################################################

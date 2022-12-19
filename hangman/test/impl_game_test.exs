@@ -36,4 +36,28 @@ defmodule HangmanImplGameTest do
   end
 
   ###########################################################
+
+  test "a duplicate letter is reported" do
+    game = Game.new_game()
+    # should not have a used letter `x`
+    {game, _tally} = Game.make_move(game, "x")
+    assert game.game_state != :already_used
+    # should not have a used letter `y`
+    {game, _tally} = Game.make_move(game, "y")
+    assert game.game_state != :already_used
+    # should have a used letter `x`
+    {game, _tally} = Game.make_move(game, "x")
+    assert game.game_state == :already_used
+  end
+
+  test "should record letters being used" do
+    game = Game.new_game()
+    {game, _tally} = Game.make_move(game, "x")
+    {game, _tally} = Game.make_move(game, "y")
+    {game, _tally} = Game.make_move(game, "x")
+    # assert all the letters entered have been used
+    assert MapSet.equal?(game.used, MapSet.new(["x", "y"]))
+  end
+
+  ###########################################################
 end
