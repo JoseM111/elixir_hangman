@@ -1,23 +1,13 @@
 defmodule Hangman do
   # aliases
   alias Hangman.Impl.Game
+  alias Hangman.Type
+  ##############################################################
 
-  # types in elixir
-  @type state ::
-          :initializing
-          | :won
-          | :lost
-          | :good_guess
-          | :bad_guess
-          | :already_used
-
-  @type tally :: %{
-          turns_left: integer,
-          game_state: state,
-          letters: list(String.t()),
-          used: list(String.t())
-        }
-
+  @doc """
+  opaque attribute to say that the internals of the
+  type should remain private from anyone who imports it
+  """
   @opaque game :: Game.t()
 
   # def new_game do
@@ -26,8 +16,8 @@ defmodule Hangman do
   @spec new_game() :: game
   defdelegate new_game, to: Game
 
-  @spec make_move(game, String.t()) :: {game, tally}
-  def make_move(_game, _guess) do
-    #
-  end
+  @spec make_move(game, String.t()) :: {game, Type.tally()}
+  defdelegate make_move(game, guess), to: Game
+
+  ##############################################################
 end
