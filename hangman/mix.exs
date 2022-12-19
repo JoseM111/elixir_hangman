@@ -1,12 +1,11 @@
-defmodule Dictionary.MixProject do
+defmodule Hangman.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :dictionary,
+      app: :hangman,
       version: "0.1.0",
       elixir: "~> 1.14",
-      elixirc_options: [debug_info: Mix.env() == :dev],
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases()
@@ -23,14 +22,14 @@ defmodule Dictionary.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      # {:dep_from_hexpm, "~> 0.3.0"},
-      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
+      {:dictionary, path: "../dictionary"},
+      {:dialyxir, "~> 1.2", only: [:dev], runtime: false}
     ]
   end
 
-  def aliases do
+  defp aliases do
     [
-      setup: ["dep.get"]
+      setup: "deps.get"
     ]
   end
 end

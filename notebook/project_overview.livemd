@@ -4,7 +4,7 @@
 Dictionary
 ```
 
-## Section EPIC001:
+## Section MAIN:
 
 ### All the `api's` in `File`
 
@@ -195,7 +195,7 @@ String.split(sample_string, ~r/\n/, trim: true)
 
 ```elixir
 path =
-  Path.expand("./../assets", __DIR__)
+  Path.expand("../dictionary/assets", __DIR__)
   |> Path.join("words.txt")
 
 words = File.read!(path)
@@ -208,7 +208,7 @@ String.split(words, ~r/\n/, trim: true)
 ```elixir
 # Lets implement all this live
 defmodule Dictionary do
-  @words_list_path Path.expand("./../assets", __DIR__)
+  @words_list_path Path.expand("../dictionary/assets", __DIR__)
                    |> Path.join("words.txt")
 
   def word_list do
@@ -345,4 +345,40 @@ from Erlang/OTP 22:
 
 ```elixir
 Dictionary.random_word()
+```
+
+## Section: EPIC0001
+
+### There are two ways of specifying an atom in Elixir. The first is to prefix a name or an operator with a colon. Here are some atoms using that notation:
+
+```elixir
+atoms = [:cat, :puppy_dog, :>=]
+```
+
+### Sometimes you need to create atoms that contain characters that aren't allowed in normal names. Do this by enclosing them in double quotes:
+
+```elixir
+crazy_atoms = [:"cat-dog", :"now is the time", :"!@$%^&UIO"]
+
+# looped_atoms =
+#   Enum.each(
+#     crazy_atoms,
+#     fn atom -> IO.inspect(IEx.Info.info(atom), label: "atom type") end
+#   )
+
+looped_atoms =
+  for atom <- crazy_atoms do
+    IO.puts("*. atom name: #{inspect(atom)}")
+    IO.puts("*. is atom?: #{inspect(is_atom(atom))}\n")
+  end
+```
+
+### This format also allows you to embed the result of evaluating code in your atom names:
+
+```elixir
+a = 99
+```
+
+```elixir
+:"next-number: #{a + 1}"
 ```
