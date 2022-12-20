@@ -1,4 +1,4 @@
-# Dictionary notebook
+# Hangman notebook
 
 ```elixir
 Dictionary
