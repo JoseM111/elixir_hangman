@@ -2,8 +2,7 @@
 # internal data structure
 defmodule Hangman.Impl.Game do
   # aliases
-  alias Hangman.Impl.Game
-  alias Hangman.Type
+  alias Hangman.{Type, Impl.Game}
   ##############################################################
 
   # type
