@@ -20,19 +20,9 @@
       <excludeFolder url="file://$MODULE_DIR$/deps" />
       <excludeFolder url="file://$MODULE_DIR$/doc" />
       <excludeFolder url="file://$MODULE_DIR$/logs" />
-      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/erlex" />
-      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/dialyxir" />
-      <excludeFolder url="file://$MODULE_DIR$/_build/dev/lib/dictionary" />
-      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/dictionary" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="dictionary" level="project" />
-    <orderEntry type="library" name="dialyxir" level="project" />
-    <orderEntry type="library" name="erlex" level="project" />
-    <orderEntry type="library" name="ex_doc" level="project" />
-    <orderEntry type="library" name="credo" level="project" />
-    <orderEntry type="library" name="excoveralls" level="project" />
     <orderEntry type="module-library">
       <library name="Elixir 1.14.2-otp-25">
         <CLASSES />
@@ -40,8 +30,5 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="ex_doc" level="project" />
-    <orderEntry type="library" name="credo" level="project" />
-    <orderEntry type="library" name="excoveralls" level="project" />
   </component>
 </module>

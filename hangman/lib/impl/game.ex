@@ -56,7 +56,7 @@ defmodule Hangman.Impl.Game do
   
   ##############################################################
   
-  defp get_tally(%Game{ } = game) do
+  def get_tally(%Game{ } = game) do
     %{
       turns_left: game.turns_left,
       game_state: game.game_state,
