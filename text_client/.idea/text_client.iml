@@ -20,6 +20,8 @@
       <excludeFolder url="file://$MODULE_DIR$/deps" />
       <excludeFolder url="file://$MODULE_DIR$/doc" />
       <excludeFolder url="file://$MODULE_DIR$/logs" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/hangman" />
+      <excludeFolder url="file://$MODULE_DIR$/_build/test/lib/dictionary" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -30,5 +32,9 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="dep_from_hexpm" level="project" />
+    <orderEntry type="library" name="hangman" level="project" />
+    <orderEntry type="library" name="dictionary" level="project" />
+    <orderEntry type="library" name="dialyxir" level="project" />
   </component>
 </module>
