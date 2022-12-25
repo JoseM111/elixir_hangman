@@ -1,8 +1,11 @@
 <component name="libraryTable">
   <library name="dialyxir" type="mix">
-    <CLASSES />
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/../hangman/_build/dev/lib/dialyxir/ebin" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../hangman/deps/dialyxir/lib" />
       <root url="file://$PROJECT_DIR$/../hangman/deps/dialyxir/lib" />
       <root url="file://$PROJECT_DIR$/../hangman/deps/dialyxir/lib" />
     </SOURCES>

@@ -41,13 +41,13 @@ defmodule Hangman.Impl.Game do
   ##############################################################
   
   @spec make_move(Game.t(), String.t()) :: { Game.t(), Type.tally() }
-  def make_move(%Game{ game_state: state } = game, _guess)
+  def make_move(game = %Game{ game_state: state }, _guess)
       when state in [ :won, :lost ] do
     game
     |> return_with_tally()
   end
   
-  def make_move(%Game{ } = game, guess) do
+  def make_move(game = %Game{ }, guess) do
     # MapSet.member?: the question mark
     # means its a predicate? true/false
     accept_guess(game, guess, MapSet.member?(game.used, guess))
@@ -56,7 +56,7 @@ defmodule Hangman.Impl.Game do
   
   ##############################################################
   
-  def get_tally(%Game{ } = game) do
+  def get_tally(game = %Game{ }) do
     %{
       turns_left: game.turns_left,
       game_state: game.game_state,
@@ -68,7 +68,7 @@ defmodule Hangman.Impl.Game do
     }
   end
   
-  defp return_with_tally(%Game{ } = game) do
+  defp return_with_tally(game = %Game{ }) do
     _tally = { game, get_tally(game) }
   end
   
@@ -76,11 +76,11 @@ defmodule Hangman.Impl.Game do
   
   # if we already picked a letter than
   # the theirs parameter will be true by default
-  defp accept_guess(%Game{ } = game, _guess, _already_used = true) do
+  defp accept_guess(game = %Game{ }, _guess, _already_used = true) do
     _updated_game_state = %{ game | game_state: :already_used }
   end
   
-  defp accept_guess(%Game{ } = game, guess, _already_used) do
+  defp accept_guess(game = %Game{ }, guess, _already_used) do
     _used_guess =
       %Game{ game | used: MapSet.put(game.used, guess) }
       |> guess_score(Enum.member?(game.letters, guess))
@@ -88,7 +88,7 @@ defmodule Hangman.Impl.Game do
   
   ##############################################################
   
-  defp guess_score(%Game{ } = game, _correct_guess = true) do
+  defp guess_score(game = %Game{ }, _correct_guess = true) do
     # if the player guesses all the letters? -> :won | _correct_guess
     # `abcomtw` is a sub-set of `wombat` <- (same letters)
     # ⤵️ Checks if map_set1's members are all contained in map_set2
@@ -100,7 +100,7 @@ defmodule Hangman.Impl.Game do
     %{ game | game_state: new_game_state }
   end
   
-  defp guess_score(%Game{ turns_left: 1 } = game, _incorrect_guess) do
+  defp guess_score(game = %Game{ turns_left: 1 }, _incorrect_guess) do
     # if :turns_left == 1 -> :lost | -decrease :turns_left, :bad_guess
     # if the player guesses all the letters?-> :won
     _lost_game = %{
@@ -110,7 +110,7 @@ defmodule Hangman.Impl.Game do
     }
   end
   
-  defp guess_score(%Game{ } = game, _incorrect_guess) do
+  defp guess_score(game = %Game{ }, _incorrect_guess) do
     # if :turns_left == 1 -> :lost | -decrease :turns_left, :bad_guess
     # if the player guesses all the letters?-> :won
     _bad_guess_decrement_turns_left = %{
@@ -122,8 +122,12 @@ defmodule Hangman.Impl.Game do
   end
   
   ##############################################################
+  defp reveal_guessed_letters(game = %Game{ game_state: :lost }) do
+    # if the game is lost
+    _return_letters_to_word = game.letters
+  end
   
-  defp reveal_guessed_letters(%Game{ } = game) do
+  defp reveal_guessed_letters(game = %Game{ }) do
     game.letters
     |> Enum.map(
          fn (letter) ->
@@ -132,6 +136,8 @@ defmodule Hangman.Impl.Game do
          end
        )
   end
+  
+  ##############################################################
   
   defp possibly_won(_won_game = true), do: :won
   defp possibly_won(_), do: :good_guess

@@ -29,7 +29,8 @@ defmodule Hangman.MixProject do
   
   defp aliases do
     [
-      setup: "deps.get"
+      setup: "deps.get",
+      test: "test --cover",
     ]
   end
 end

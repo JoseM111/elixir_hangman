@@ -28,8 +28,8 @@ defmodule TextClient.MixProject do
   
   defp aliases do
     [
-      test: [ "test --cover --formatter text_client.ex --color" ],
-      setup: [ "deps.get" ],
+      setup: "deps.get",
+      test: "test --cover",
     ]
   end
 end
