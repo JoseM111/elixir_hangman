@@ -122,20 +122,36 @@ defmodule Hangman.Impl.Game do
   end
   
   ##############################################################
-  defp reveal_guessed_letters(game = %Game{ game_state: :lost }) do
-    # if the game is lost
-    _return_letters_to_word = game.letters
-  end
   
   defp reveal_guessed_letters(game = %Game{ }) do
-    game.letters
-    |> Enum.map(
-         fn (letter) ->
-           MapSet.member?(game.used, letter)
-           |> reveal_letter(letter)
-         end
-       )
+    case game do
+      %Game{ game_state: :lost } ->
+        _return_letters_to_word = game.letters
+      %Game{ } ->
+        game.letters
+        |> Enum.map(
+             fn (letter) ->
+               MapSet.member?(game.used, letter)
+               |> reveal_letter(letter)
+             end
+           )
+    end
   end
+  
+  #  defp reveal_guessed_letters(game = %Game{ game_state: :lost }) do
+  #    # if the game is lost
+  #    _return_letters_to_word = game.letters
+  #  end
+  #
+  #  defp reveal_guessed_letters(game = %Game{ }) do
+  #    game.letters
+  #    |> Enum.map(
+  #         fn (letter) ->
+  #           MapSet.member?(game.used, letter)
+  #           |> reveal_letter(letter)
+  #         end
+  #       )
+  #  end
   
   ##############################################################
   
