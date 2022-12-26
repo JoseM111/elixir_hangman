@@ -1,12 +1,13 @@
 defmodule Dictionary do
-  # module-attribute (read at compile time)
-  @words_list_path Path.expand("./../assets", __DIR__)
-                   |> Path.join("words.txt")
-                   |> File.read!()
-                   |> String.split(~r/\n/, trim: true)
-
-  def random_word do
-    @words_list_path
-    |> Enum.random()
-  end
+  alias Dictionary.Impl.WordList
+  # opaque type
+  @opaque t :: WordList.t
+  #########################################
+  
+  @spec start() :: t
+  defdelegate start(), to: WordList, as: :get_word_list
+  
+  @spec random_word(t) :: String.t
+  defdelegate random_word(get_word_list), to: WordList
+  #########################################
 end

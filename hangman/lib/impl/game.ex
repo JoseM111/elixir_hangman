@@ -3,6 +3,7 @@
 defmodule Hangman.Impl.Game do
   # aliases
   alias Hangman.{ Type, Impl.Game }
+  alias Dictionary.Impl.WordList
   ##############################################################
   
   # type
@@ -26,8 +27,11 @@ defmodule Hangman.Impl.Game do
   @spec new_game :: Game.t()
   @doc "returns a fresh new game state"
   def new_game do
-    # new_game/1 ⏬
-    new_game(Dictionary.random_word())
+    # new_game/1 ⏬ long form code
+    #    new_game(Dictionary.random_word(Dictionary.start()))
+    Dictionary.start()
+    |> Dictionary.random_word()
+    |> new_game()
   end
   
   @spec new_game(String.t()) :: Game.t()
