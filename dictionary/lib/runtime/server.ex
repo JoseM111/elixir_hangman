@@ -13,14 +13,17 @@ defmodule Dictionary.Runtime.Server do
   alias Dictionary.Impl.WordList
   
   # using the module name for the pid constant
-  @pid_constant __MODULE__
+  @pid_for_wordlist __MODULE__
   #############################################
   def start_link do
-    Agent.start_link(&WordList.get_word_list/0, name: @pid_constant)
+    Agent.start_link(
+      &WordList.get_word_list/0,
+      name: @pid_for_wordlist
+    )
   end
   
   def random_word() do
-    Agent.get(@pid_constant, &WordList.random_word/1)
+    Agent.get(@pid_for_wordlist, &WordList.random_word/1)
   end
 end
 ###########################################
