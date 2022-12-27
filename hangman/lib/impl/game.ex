@@ -3,6 +3,7 @@
 defmodule Hangman.Impl.Game do
   # aliases
   alias Hangman.{ Type, Impl.Game }
+  alias Dictionary.Impl.WordList
   ##############################################################
   
   # type
@@ -26,8 +27,11 @@ defmodule Hangman.Impl.Game do
   @spec new_game :: Game.t()
   @doc "returns a fresh new game state"
   def new_game do
-    # new_game/1 ⏬
-    new_game(Dictionary.random_word())
+    # new_game/1 ⏬ long form code
+    #    new_game(Dictionary.random_word(Dictionary.start()))
+    Dictionary.start()
+    |> Dictionary.random_word()
+    |> new_game()
   end
   
   @spec new_game(String.t()) :: Game.t()
@@ -122,20 +126,36 @@ defmodule Hangman.Impl.Game do
   end
   
   ##############################################################
-  defp reveal_guessed_letters(game = %Game{ game_state: :lost }) do
-    # if the game is lost
-    _return_letters_to_word = game.letters
-  end
   
   defp reveal_guessed_letters(game = %Game{ }) do
-    game.letters
-    |> Enum.map(
-         fn (letter) ->
-           MapSet.member?(game.used, letter)
-           |> reveal_letter(letter)
-         end
-       )
+    case game do
+      %Game{ game_state: :lost } ->
+        _return_letters_to_word = game.letters
+      %Game{ } ->
+        game.letters
+        |> Enum.map(
+             fn (letter) ->
+               MapSet.member?(game.used, letter)
+               |> reveal_letter(letter)
+             end
+           )
+    end
   end
+  
+  #  defp reveal_guessed_letters(game = %Game{ game_state: :lost }) do
+  #    # if the game is lost
+  #    _return_letters_to_word = game.letters
+  #  end
+  #
+  #  defp reveal_guessed_letters(game = %Game{ }) do
+  #    game.letters
+  #    |> Enum.map(
+  #         fn (letter) ->
+  #           MapSet.member?(game.used, letter)
+  #           |> reveal_letter(letter)
+  #         end
+  #       )
+  #  end
   
   ##############################################################
   
