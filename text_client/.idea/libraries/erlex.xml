@@ -2,9 +2,12 @@
   <library name="erlex" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../hangman/_build/dev/lib/erlex/ebin" />
+      <root url="file://$PROJECT_DIR$/../hangman/_build/dev/lib/erlex/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../hangman/deps/erlex/lib" />
+      <root url="file://$PROJECT_DIR$/../hangman/deps/erlex/src" />
       <root url="file://$PROJECT_DIR$/../hangman/deps/erlex/lib" />
       <root url="file://$PROJECT_DIR$/../hangman/deps/erlex/src" />
       <root url="file://$PROJECT_DIR$/../hangman/deps/erlex/lib" />

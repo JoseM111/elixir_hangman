@@ -4,6 +4,12 @@
 Dictionary
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+Dictionary
+```
+
 ## Section MAIN:
 
 ### All the `api's` in `File`
@@ -14,28 +20,28 @@ Dictionary
 
 ```elixir
 iex(4)> File.
-        CopyError        Error            LinkError        RenameError
-Stat             Stream           cd!/1            cd!/2
-cd/1             chgrp!/2         chgrp/2          chmod!/2
-chmod/2          chown!/2         chown/2          close/1
-copy!/2          copy!/3          copy/2           copy/3
-cp!/2            cp!/3            cp/2             cp/3
-cp_r!/2          cp_r!/3          cp_r/2           cp_r/3
-cwd!/0           cwd/0            dir?/1           dir?/2
-exists?/1        exists?/2        ln!/2            ln/2
-ln_s!/2          ln_s/2           ls!/0            ls!/1
-ls/0             ls/1             lstat!/1         lstat!/2
-lstat/1          lstat/2          mkdir!/1         mkdir/1
-mkdir_p!/1       mkdir_p/1        open!/1          open!/2
-open!/3          open/1           open/2           open/3
-read!/1          read/1           read_link!/1     read_link/1
-regular?/1       regular?/2       rename!/2        rename/2
-rm!/1            rm/1             rm_rf!/1         rm_rf/1
-rmdir!/1         rmdir/1          stat!/1          stat!/2
-stat/1           stat/2           stream!/1        stream!/2
-stream!/3        touch!/1         touch!/2         touch/1
-touch/2          write!/2         write!/3         write/2
-write/3          write_stat!/2    write_stat!/3    write_stat/2
+CopyError        Error            LinkError        RenameError      
+Stat             Stream           cd!/1            cd!/2            
+cd/1             chgrp!/2         chgrp/2          chmod!/2         
+chmod/2          chown!/2         chown/2          close/1          
+copy!/2          copy!/3          copy/2           copy/3           
+cp!/2            cp!/3            cp/2             cp/3             
+cp_r!/2          cp_r!/3          cp_r/2           cp_r/3           
+cwd!/0           cwd/0            dir?/1           dir?/2           
+exists?/1        exists?/2        ln!/2            ln/2             
+ln_s!/2          ln_s/2           ls!/0            ls!/1            
+ls/0             ls/1             lstat!/1         lstat!/2         
+lstat/1          lstat/2          mkdir!/1         mkdir/1          
+mkdir_p!/1       mkdir_p/1        open!/1          open!/2          
+open!/3          open/1           open/2           open/3           
+read!/1          read/1           read_link!/1     read_link/1      
+regular?/1       regular?/2       rename!/2        rename/2         
+rm!/1            rm/1             rm_rf!/1         rm_rf/1          
+rmdir!/1         rmdir/1          stat!/1          stat!/2          
+stat/1           stat/2           stream!/1        stream!/2        
+stream!/3        touch!/1         touch!/2         touch/1          
+touch/2          write!/2         write!/3         write/2          
+write/3          write_stat!/2    write_stat!/3    write_stat/2     
 write_stat/3     
 ```
 
@@ -179,9 +185,21 @@ single occurrence. Divisions do not occur on non-breaking whitespace.
 sample_string = "123\n456\n789\n"
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"123\n456\n789\n"
+```
+
 ```elixir
 # split the string on \n using a regular expression (Will hav an empty string at the end)
 String.split(sample_string, ~r/\n/)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["123", "456", "789", ""]
 ```
 
 ```elixir
@@ -189,6 +207,12 @@ String.split(sample_string, ~r/\n/)
 # we ended up with a extra empty string in our list
 # to remove that we will do the following
 String.split(sample_string, ~r/\n/, trim: true)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["123", "456", "789"]
 ```
 
 ### Now to split our words list
@@ -201,8 +225,24 @@ path =
 words = File.read!(path)
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"that\nthis\nwith\nfrom\nyour\nhave\nmore\nwill\nhome\nabout\npage\nsearch\nfree\nother\ninformation\ntime\nthey\nsite\nwhat\nwhich\ntheir\nnews\nthere\nonly\nwhen\ncontact\nhere\nbusiness\nalso\nhelp\nview\nonline\nfirst\nbeen\nwould\nwere\nservices\nsome\nthese\nclick\nlike\nservice\nthan\nfind\nprice\ndate\nback\npeople\nlist\nname\njust\nover\nstate\nyear\ninto\nemail\nhealth\nworld\nnext\nused\nwork\nlast\nmost\nproducts\nmusic\ndata\nmake\nthem\nshould\nproduct\nsystem\npost\ncity\npolicy\nnumber\nsuch\nplease\navailable\ncopyright\nsupport\nmessage\nafter\nbest\nsoftware\nthen\ngood\nvideo\nwell\nwhere\ninfo\nrights\npublic\nbooks\nhigh\nschool\nthrough\neach\nlinks\nreview\nyears\norder\nvery\nprivacy\nbook\nitems\ncompany\nread\ngroup\nneed\nmany\nuser\nsaid\ndoes\nunder\ngeneral\nresearch\nuniversity\njanuary\nmail\nfull\nreviews\nprogram\nlife\nknow\ngames\ndays\nmanagement\npart\ncould\ngreat\nunited\nhotel\nreal\nitem\ninternational\ncenter\nebay\nmust\nstore\ntravel\ncomments\nmade\ndevelopment\nreport\nmember\ndetails\nline\nterms\nbefore\nhotels\nsend\nright\ntype\nbecause\nlocal\nthose\nusing\nresults\noffice\neducation\nnational\ndesign\ntake\nposted\ninternet\naddress\ncommunity\nwithin\nstates\narea\nwant\nphone\nshipping\nreserved\nsubject\nbetween\nforum\nfamily\nlong\nbased\ncode\nshow\neven\nblack\ncheck\nspecial\nprices\nwebsite\nindex\nbeing\nwomen\nmuch\nsign\nfile\nlink\nopen\ntoday\ntechnology\nsouth\ncase\nproject\nsame\npages\nversion\nsection\nfound\nsports\nhouse\nrelated\nsecurity\nboth\ncounty\namerican\nphoto\ngame\nmembers\npower\nwhile\ncare\nnetwork\ndown\ncomputer\nsystems\nthree\ntotal\nplace\nfollowing\ndownload\nwithout\naccess\nthink\nnorth\nresources\ncurrent\nposts\nmedia\ncontrol\nwater\nhistory\npictures\nsize\npersonal\nsince\nincluding\nguide\nshop\ndirectory\nboard\nlocation\nchange\nwhite\ntext\nsmall\nrating\nrate\ngovernment\nchildren\nduring\nreturn\nstudents\nshopping\naccount\ntimes\nsites\nlevel\ndigital\nprofile\nprevious\nform\nevents\nlove\njohn\nmain\ncall\nhours\nimage\ndepartment\ntitle\ndescription\ninsurance\nanother\nshall\nproperty\nclass\nstill\nmoney\nquality\nevery\nlisting\ncontent\ncountry\nprivate\nlittle\nvisit\nsave\ntools\nreply\ncustomer\ndecember\ncompare\nmovies\ninclude\ncollege\nvalue\narticle\nyork\ncard\njobs\nprovide\nfood\nsource\nauthor\ndifferent\npress\nlearn\nsale\naround\nprint\ncourse\ncanada\nprocess\nteen\nroom\nstock\ntraining\ncredit\npoint\njoin\nscience\ncategories\nadvanced\nwest\nsales\nlook\nenglish\nleft\nteam\nestate\nconditions\nselect\nwindows\nphotos\nthread\nweek\ncategory\nnote\nlive\nlarge\ngallery\ntable\nregister\nhowever\njune\noctober\nnovember\nmarket\nlibrary\nreally\naction\nstart\nseries\nmodel\nfeatures\nindustry\nplan\nhuman\nprovided\nrequired\nsecond\naccessories\ncost\nmovie\nforums\nmarch\nseptember\nbetter\nquestions\njuly\nyahoo\ngoing\nmedical\ntest\nfriend\ncome\nserver\nstudy\napplication\ncart\nstaff\narticles\nfeedback\nagain\nplay\nlooking\nissues\napril\nnever\nusers\ncomplete\nstreet\ntopic\ncomment\nfinancial\nthings\nworking\nagainst\nstandard\nperson\nbelow\nmobile\nless\nblog\nparty\npayment\nequipment\nlogin\nstudent\nprograms\noffers\nlegal\nabove\nrecent\npark\nstores\nside\nproblem\ngive\nmemory\nperformance\nsocial\naugust\nquote\nlanguage\nstory\nsell\noptions\nexperience\nrates\ncreate\nbody\nyoung\namerica\nimportant\nfield\neast\npaper\nsingle\nactivities\nclub\nexample\ngirls\nadditional\npassword\nlatest\nsomething\nroad\ngift\nquestion\nchanges\nnight\nhard\ntexas\nfour\npoker\nstatus\nbrowse\nissue\nrange\nbuilding\nseller\ncourt\nfebruary\nalways\nresult\naudio\nlight\nwrite\noffer\nblue\ngroups\neasy\ngiven\nfiles\nevent\nrelease\nanalysis\nrequest\nchina\nmaking\npicture\nneeds\npossible\nmight\nprofessional\nmonth\nmajor\nstar\nareas\nfuture\nspace\ncommittee\nhand\ncards\nproblems\nlondon\nwashington\nmeeting\nbecome\ninterest\nchild\nkeep\nenter\ncalifornia\nshare\nsimilar\ngarden\nschools\nmillion\nadded\nreference\ncompanies\nlisted\nbaby\nlearning\nenergy\ndelivery\npopular\nterm\nfilm\nstories\ncomputers\njournal\nreports\nwelcome\ncentral\nimages\npresident\nnotice\noriginal\nhead\nradio\nuntil\ncell\ncolor\nself\ncouncil\naway\nincludes\ntrack\naustralia\ndiscussion\narchive\nonce\nothers\nentertainment\nagreement\nformat\nleast\nsociety\nmonths\nsafety\nfriends\nsure\ntrade\nedition\ncars\nmessages\nmarketing\ntell\nfurther\nupdated\nassociation\nable\nhaving\nprovides\ndavid\nalready\ngreen\nstudies\nclose\ncommon\ndrive\nspecific\nseveral\ngold\nliving\ncollection\ncalled\nshort\narts\ndisplay\nlimited\npowered\nsolutions\nmeans\ndirector\ndail" <> ...
+```
+
 ```elixir
 String.split(words, ~r/\n/, trim: true)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["that", "this", "with", "from", "your", "have", "more", "will", "home", "about", "page", "search",
+ "free", "other", "information", "time", "they", "site", "what", "which", "their", "news", "there",
+ "only", "when", "contact", "here", "business", "also", "help", "view", "online", "first", "been",
+ "would", "were", "services", "some", "these", "click", "like", "service", "than", "find", "price",
+ "date", "back", "people", "list", "name", ...]
 ```
 
 ```elixir
@@ -225,6 +265,16 @@ end
 # ========================================================
 
 words = Dictionary.word_list()
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["that", "this", "with", "from", "your", "have", "more", "will", "home", "about", "page", "search",
+ "free", "other", "information", "time", "they", "site", "what", "which", "their", "news", "there",
+ "only", "when", "contact", "here", "business", "also", "help", "view", "online", "first", "been",
+ "would", "were", "services", "some", "these", "click", "like", "service", "than", "find", "price",
+ "date", "back", "people", "list", "name", ...]
 ```
 
 ### lets now try to find a way to randomize the words, inside the list module
@@ -347,12 +397,24 @@ from Erlang/OTP 22:
 Dictionary.random_word()
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"monetary"
+```
+
 ## Section: EPIC0001
 
 ### There are two ways of specifying an atom in Elixir. The first is to prefix a name or an operator with a colon. Here are some atoms using that notation:
 
 ```elixir
 atoms = [:cat, :puppy_dog, :>=]
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:cat, :puppy_dog, :>=]
 ```
 
 ### Sometimes you need to create atoms that contain characters that aren't allowed in normal names. Do this by enclosing them in double quotes:
@@ -373,14 +435,46 @@ looped_atoms =
   end
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+*. atom name: :"cat-dog"
+*. is atom?: true
+
+*. atom name: :"now is the time"
+*. is atom?: true
+
+*. atom name: :"!@$%^&UIO"
+*. is atom?: true
+
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:ok, :ok, :ok]
+```
+
 ### This format also allows you to embed the result of evaluating code in your atom names:
 
 ```elixir
 a = 99
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+99
+```
+
 ```elixir
 :"next-number: #{a + 1}"
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:"next-number: 100"
 ```
 
 ## Section: EPIC0003
@@ -428,6 +522,24 @@ send(pid, {:quit})
 # process should not be alive after :quit
 send(pid, {:crash, :normal})
 Process.alive?(pid)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+0: Hello "Hola"
+1: Hello "Again"
+2: Hello [1, 2, 3]
+3: Hello 17.0
+4: Hello :alias_one_11
+Program quit: {:quit}
+{:add, n}: {:quit}
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+true
 ```
 
 ### Using Agents instead of processes
@@ -545,13 +657,26 @@ Agent.get_and_update(
 )
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+get_and_update: {0, 1}
+get_and_update: {1, 2}
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+1
+```
+
 ### Converting our dictionary api by way of refactoring it with `Agents`
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 34 55 PM" src="https://user-images.githubusercontent.com/44812411/209578926-79faf300-8c95-4cc2-bc5d-831b75d6a71c.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 34 55 PM" src="https://user-images.githubusercontent.com/44812411/209578926-79faf300-8c95-4cc2-bc5d-831b75d6a71c.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 40 35 PM" src="https://user-images.githubusercontent.com/44812411/209579114-a3ca7a30-ca01-48b3-90c2-ed679ec0c916.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 40 35 PM" src="https://user-images.githubusercontent.com/44812411/209579114-a3ca7a30-ca01-48b3-90c2-ed679ec0c916.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 39 53 PM" src="https://user-images.githubusercontent.com/44812411/209579117-41d519de-4c60-4eea-8b2b-b9e7274021c6.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 39 53 PM" src="https://user-images.githubusercontent.com/44812411/209579117-41d519de-4c60-4eea-8b2b-b9e7274021c6.png" />
 
 <!-- livebook:{"break_markdown":true} -->
 
@@ -606,8 +731,86 @@ iex(6)> Dictionary.random_word(pid)
 
 ### Our next steps... Converting our Dictionary library into an `Application`
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 15 12 PM" src="https://user-images.githubusercontent.com/44812411/209583732-87cc2e0c-e23e-407e-abf7-2fb49db93a89.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 15 12 PM" src="https://user-images.githubusercontent.com/44812411/209583732-87cc2e0c-e23e-407e-abf7-2fb49db93a89.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/44812411/209583735-ef3b911b-ad34-4207-9c99-29bd46baa087.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/44812411/209583735-ef3b911b-ad34-4207-9c99-29bd46baa087.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 14 03 PM" src="https://user-images.githubusercontent.com/44812411/209583736-361064bf-a128-4ba8-adb0-8866874606bd.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 03 PM" src="https://user-images.githubusercontent.com/44812411/209583736-361064bf-a128-4ba8-adb0-8866874606bd.png" />
+
+## Section: EPIC0004
+
+### Project summary up to this point
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 00 30 PM" src="https://user-images.githubusercontent.com/44812411/209716756-3a880a8d-3018-4df5-b9cc-64206c08727d.png" />
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 06 40 PM" src="https://user-images.githubusercontent.com/44812411/209717207-ddb1dc5e-7060-4f59-9d26-a906d9f3df8a.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### GenServer is a wrapper for any server:
+
+* `GenServer` **is an abstraction that allows us to run code without having to deal with all of the details like:**
+    * *__Life-cycle management__*
+    * *__Timeouts__*
+    * *__Timeouts__*
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 08 20 PM" src="https://user-images.githubusercontent.com/44812411/209717854-bf377693-4bdd-4783-aff3-2a499a3b485c.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### The `Gen` in `GenServer` stands for *`Generic`* that will `wrap` any *`server`* in the `elixir` *world*
+
+---
+
+___
+
+> #### __Its an __*`abstraction`*__, simlar to how `Enum` is an `abstraction` to a _`collection`_ & `Agents` are an `abstraction` over a `process/server` that _`holds state`___
+
+> > * __A `GenServer` has to `distinct API's`, because just like the _`Agent`_, it has a `process` on the _`client`_ for the `Agent` that uses it but it also has `code` that uses it in the _`server processes`___
+
+> > * __These two `pieces of code` will `communicate` via `messages` but live in _`two different environments (Agent vs GenServer)`_, so the API's are quite distinct.__
+
+> > * <img width="750" alt="Screenshot 2022-12-27 at 3 40 03 PM" src="https://user-images.githubusercontent.com/44812411/209720109-31e0a7e4-9722-406e-8fcf-dd5cac53f24d.png">
+
+<!-- livebook:{"break_markdown":true} -->
+
+### An example on the implementation
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 44 06 PM" src="https://user-images.githubusercontent.com/44812411/209720364-63fb1974-e04c-492d-a9e3-192c7f8780e1.png" />
+
+```elixir
+import IEx.Helpers
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+IEx.Helpers
+```
+
+```elixir
+h(Enum.map())
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+                            def map(enumerable, fun)                            
+
+  @spec map(t(), (element() -> any())) :: list()
+
+Returns a list where each element is the result of invoking fun on each
+corresponding element of enumerable.
+
+For maps, the function expects a key-value tuple.
+
+## Examples
+
+    iex> Enum.map([1, 2, 3], fn x -> x * 2 end)
+    [2, 4, 6]
+    
+    iex> Enum.map([a: 1, b: 2], fn {k, v} -> {k, -v} end)
+    [a: -1, b: -2]
+
+```
