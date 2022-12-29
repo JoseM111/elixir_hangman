@@ -1,7 +1,10 @@
 # Hangman notebook
 
 ```elixir
-Dictionary
+import IEx.Helpers
+import IEx.Autocomplete
+import IEx.History
+import IEx.Info
 ```
 
 ## Section MAIN:
@@ -654,9 +657,162 @@ ___
 <img width="750" alt="Screenshot 2022-12-27 at 3 44 06 PM" src="https://user-images.githubusercontent.com/44812411/209720364-63fb1974-e04c-492d-a9e3-192c7f8780e1.png" />
 
 ```elixir
-import IEx.Helpers
+h(GenServer)
 ```
 
+### How we used it in `IEx`
+
+<!-- livebook:{"force_markdown":true} -->
+
 ```elixir
-h(Enum.map())
+iex(2)> game = Hangman.new_game
+#PID<0.232.0>
+iex(3)> Hangman.make_move(game, "a")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "_", "_", "_", "_"],
+  turns_left: 6,
+  used: ["a"]
+}
+iex(4)> Hangman.make_move(game, "d")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 6,
+  used: ["a", "d"]
+}
+iex(5)> Hangman.make_move(game, "l")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "l"]
+}
+iex(6)> Hangman.make_move(game, "a")
+%{
+  game_state: :already_used,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "l"]
+}
+iex(7)> Hangman.make_move(game, "i")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "i", "l"]
+}
+iex(8)> Hangman.make_move(game, "p")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 4,
+  used: ["a", "d", "i", "l", "p"]
+}
+iex(9)> Hangman.make_move(game, "s")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 3,
+  used: ["a", "d", "i", "l", "p", "s"]
+}
+iex(10)> Hangman.make_move(game, "e")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 3,
+  used: ["a", "d", "e", "i", "l", "p", "s"]
+}
+iex(11)> Hangman.make_move(game, "f")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 2,
+  used: ["a", "d", "e", "f", "i", "l", "p", "s"]
+}
+iex(12)> Hangman.make_move(game, "u")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "l", "p", "s", "u"]
+}
+iex(13)> Hangman.make_move(game, "j")
+%{
+  game_state: :good_guess,
+  letters: ["j", "_", "i", "_", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "p", "s", "u"]
+}
+iex(14)> Hangman.make_move(game, "n")
+%{
+  game_state: :good_guess,
+  letters: ["j", "_", "i", "n", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "n", "p", "s", "u"]
+}
+iex(15)> Hangman.make_move(game, "o")
+%{
+  game_state: :won,
+  letters: ["j", "o", "i", "n", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "n", "o", "p", "s", "u"]
+}
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+### `Nodes` and `Distributed` Elixir
+
+#### Specifying the `nodes` names
+
+> > Short names are specified using just the node's name. The host name of the machine running the node will be added by the runtime
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+$ mix --sname node1
+```
+
+> > Long names include the fully qualified domain name or IP address of the box:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+$ mix --name node1@quarry.bedrock.com
+```
+
+> > ___
+
+<!-- livebook:{"break_markdown":true} -->
+
+#### Naming a `PID`
+
+> > The low-level way to associate a name with a PID is:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+Process.register(pid, :name)
+```
+
+> > Once this connection is made, you can use the name when sending messages to the pid:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+pid = spawn . . .
+Process.register(pid, :my_process)
+
+send(pid, :hello)
+# is the same as...
+send(:my_process, :hello)
+```
+
+> > You can send to a process on another node by using a tuple containing the process name and node name in place of the simple pid:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+send( { :my_process, :node1@quarry }, :hello )
 ```
