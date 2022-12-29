@@ -1,0 +1,3 @@
+defmodule ScratchProject do
+
+end

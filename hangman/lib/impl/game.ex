@@ -3,7 +3,6 @@
 defmodule Hangman.Impl.Game do
   # aliases
   alias Hangman.{ Type, Impl.Game }
-  alias Dictionary.Impl.WordList
   ##############################################################
   
   # type
@@ -29,8 +28,7 @@ defmodule Hangman.Impl.Game do
   def new_game do
     # new_game/1 ⏬ long form code
     #    new_game(Dictionary.random_word(Dictionary.start()))
-    Dictionary.start()
-    |> Dictionary.random_word()
+    Dictionary.random_word()
     |> new_game()
   end
   

@@ -4,6 +4,12 @@
 Dictionary
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+Dictionary
+```
+
 ## Section MAIN:
 
 ### All the `api's` in `File`
@@ -14,29 +20,29 @@ Dictionary
 
 ```elixir
 iex(4)> File.
-CopyError        Error            LinkError        RenameError
-Stat             Stream           cd!/1            cd!/2
-cd/1             chgrp!/2         chgrp/2          chmod!/2
-chmod/2          chown!/2         chown/2          close/1
-copy!/2          copy!/3          copy/2           copy/3
-cp!/2            cp!/3            cp/2             cp/3
-cp_r!/2          cp_r!/3          cp_r/2           cp_r/3
-cwd!/0           cwd/0            dir?/1           dir?/2
-exists?/1        exists?/2        ln!/2            ln/2
-ln_s!/2          ln_s/2           ls!/0            ls!/1
-ls/0             ls/1             lstat!/1         lstat!/2
-lstat/1          lstat/2          mkdir!/1         mkdir/1
-mkdir_p!/1       mkdir_p/1        open!/1          open!/2
-open!/3          open/1           open/2           open/3
-read!/1          read/1           read_link!/1     read_link/1
-regular?/1       regular?/2       rename!/2        rename/2
-rm!/1            rm/1             rm_rf!/1         rm_rf/1
-rmdir!/1         rmdir/1          stat!/1          stat!/2
-stat/1           stat/2           stream!/1        stream!/2
-stream!/3        touch!/1         touch!/2         touch/1
-touch/2          write!/2         write!/3         write/2
-write/3          write_stat!/2    write_stat!/3    write_stat/2
-write_stat/3
+CopyError        Error            LinkError        RenameError      
+Stat             Stream           cd!/1            cd!/2            
+cd/1             chgrp!/2         chgrp/2          chmod!/2         
+chmod/2          chown!/2         chown/2          close/1          
+copy!/2          copy!/3          copy/2           copy/3           
+cp!/2            cp!/3            cp/2             cp/3             
+cp_r!/2          cp_r!/3          cp_r/2           cp_r/3           
+cwd!/0           cwd/0            dir?/1           dir?/2           
+exists?/1        exists?/2        ln!/2            ln/2             
+ln_s!/2          ln_s/2           ls!/0            ls!/1            
+ls/0             ls/1             lstat!/1         lstat!/2         
+lstat/1          lstat/2          mkdir!/1         mkdir/1          
+mkdir_p!/1       mkdir_p/1        open!/1          open!/2          
+open!/3          open/1           open/2           open/3           
+read!/1          read/1           read_link!/1     read_link/1      
+regular?/1       regular?/2       rename!/2        rename/2         
+rm!/1            rm/1             rm_rf!/1         rm_rf/1          
+rmdir!/1         rmdir/1          stat!/1          stat!/2          
+stat/1           stat/2           stream!/1        stream!/2        
+stream!/3        touch!/1         touch!/2         touch/1          
+touch/2          write!/2         write!/3         write/2          
+write/3          write_stat!/2    write_stat!/3    write_stat/2     
+write_stat/3     
 ```
 
 <!-- livebook:{"break_markdown":true} -->
@@ -48,7 +54,7 @@ write_stat/3
 ```elixir
 iex(4)> h File.read
 
-                                 def read(path)
+                                 def read(path)                                 
 
   @spec read(Path.t()) :: {:ok, binary()} | {:error, posix()}
 
@@ -77,7 +83,7 @@ You can use :file.format_error/1 to get a descriptive string of the error.
 ```elixir
 iex(5)> h File.read!
 
-                                def read!(path)
+                                def read!(path)                                 
 
   @spec read!(Path.t()) :: binary()
 
@@ -108,27 +114,27 @@ iex(7)> File.read!("assets/words.txt")
 
 ```elixir
 iex(8)> String.
-Break                 Chars                 Tokenizer
-Unicode               at/2                  bag_distance/2
-capitalize/1          capitalize/2          chunk/2
-codepoints/1          contains?/2           downcase/1
-downcase/2            duplicate/2           ends_with?/2
-equivalent?/2         first/1               graphemes/1
-jaro_distance/2       last/1                length/1
-match?/2              myers_difference/2    next_codepoint/1
-next_grapheme/1       normalize/2           pad_leading/2
-pad_leading/3         pad_trailing/2        pad_trailing/3
-printable?/1          printable?/2          replace/3
-replace/4             replace_leading/3     replace_prefix/3
-replace_suffix/3      replace_trailing/3    reverse/1
-slice/2               slice/3               split/1
-split/2               split/3               split_at/2
-splitter/2            splitter/3            starts_with?/2
-to_atom/1             to_charlist/1         to_existing_atom/1
-to_float/1            to_integer/1          to_integer/2
-trim/1                trim/2                trim_leading/1
-trim_leading/2        trim_trailing/1       trim_trailing/2
-upcase/1              upcase/2              valid?/1
+Break                 Chars                 Tokenizer             
+Unicode               at/2                  bag_distance/2        
+capitalize/1          capitalize/2          chunk/2               
+codepoints/1          contains?/2           downcase/1            
+downcase/2            duplicate/2           ends_with?/2          
+equivalent?/2         first/1               graphemes/1           
+jaro_distance/2       last/1                length/1              
+match?/2              myers_difference/2    next_codepoint/1      
+next_grapheme/1       normalize/2           pad_leading/2         
+pad_leading/3         pad_trailing/2        pad_trailing/3        
+printable?/1          printable?/2          replace/3             
+replace/4             replace_leading/3     replace_prefix/3      
+replace_suffix/3      replace_trailing/3    reverse/1             
+slice/2               slice/3               split/1               
+split/2               split/3               split_at/2            
+splitter/2            splitter/3            starts_with?/2        
+to_atom/1             to_charlist/1         to_existing_atom/1    
+to_float/1            to_integer/1          to_integer/2          
+trim/1                trim/2                trim_leading/1        
+trim_leading/2        trim_trailing/1       trim_trailing/2       
+upcase/1              upcase/2              valid?/1   
 ```
 
 <!-- livebook:{"break_markdown":true} -->
@@ -144,7 +150,7 @@ upcase/1              upcase/2              valid?/1
 ```elixir
 iex(8)> h String.split/1
 
-                               def split(binary)
+                               def split(binary)                                
 
   @spec split(t()) :: [t()]
 
@@ -158,13 +164,13 @@ single occurrence. Divisions do not occur on non-breaking whitespace.
 
     iex> String.split("foo bar")
     ["foo", "bar"]
-
+    
     iex> String.split("foo" <> <<194, 133>> <> "bar")
     ["foo", "bar"]
-
+    
     iex> String.split(" foo   bar ")
     ["foo", "bar"]
-
+    
     iex> String.split("no\u00a0break")
     ["no\u00a0break"]
 ```
@@ -179,9 +185,21 @@ single occurrence. Divisions do not occur on non-breaking whitespace.
 sample_string = "123\n456\n789\n"
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"123\n456\n789\n"
+```
+
 ```elixir
 # split the string on \n using a regular expression (Will hav an empty string at the end)
 String.split(sample_string, ~r/\n/)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["123", "456", "789", ""]
 ```
 
 ```elixir
@@ -189,6 +207,12 @@ String.split(sample_string, ~r/\n/)
 # we ended up with a extra empty string in our list
 # to remove that we will do the following
 String.split(sample_string, ~r/\n/, trim: true)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["123", "456", "789"]
 ```
 
 ### Now to split our words list
@@ -201,8 +225,24 @@ path =
 words = File.read!(path)
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"that\nthis\nwith\nfrom\nyour\nhave\nmore\nwill\nhome\nabout\npage\nsearch\nfree\nother\ninformation\ntime\nthey\nsite\nwhat\nwhich\ntheir\nnews\nthere\nonly\nwhen\ncontact\nhere\nbusiness\nalso\nhelp\nview\nonline\nfirst\nbeen\nwould\nwere\nservices\nsome\nthese\nclick\nlike\nservice\nthan\nfind\nprice\ndate\nback\npeople\nlist\nname\njust\nover\nstate\nyear\ninto\nemail\nhealth\nworld\nnext\nused\nwork\nlast\nmost\nproducts\nmusic\ndata\nmake\nthem\nshould\nproduct\nsystem\npost\ncity\npolicy\nnumber\nsuch\nplease\navailable\ncopyright\nsupport\nmessage\nafter\nbest\nsoftware\nthen\ngood\nvideo\nwell\nwhere\ninfo\nrights\npublic\nbooks\nhigh\nschool\nthrough\neach\nlinks\nreview\nyears\norder\nvery\nprivacy\nbook\nitems\ncompany\nread\ngroup\nneed\nmany\nuser\nsaid\ndoes\nunder\ngeneral\nresearch\nuniversity\njanuary\nmail\nfull\nreviews\nprogram\nlife\nknow\ngames\ndays\nmanagement\npart\ncould\ngreat\nunited\nhotel\nreal\nitem\ninternational\ncenter\nebay\nmust\nstore\ntravel\ncomments\nmade\ndevelopment\nreport\nmember\ndetails\nline\nterms\nbefore\nhotels\nsend\nright\ntype\nbecause\nlocal\nthose\nusing\nresults\noffice\neducation\nnational\ndesign\ntake\nposted\ninternet\naddress\ncommunity\nwithin\nstates\narea\nwant\nphone\nshipping\nreserved\nsubject\nbetween\nforum\nfamily\nlong\nbased\ncode\nshow\neven\nblack\ncheck\nspecial\nprices\nwebsite\nindex\nbeing\nwomen\nmuch\nsign\nfile\nlink\nopen\ntoday\ntechnology\nsouth\ncase\nproject\nsame\npages\nversion\nsection\nfound\nsports\nhouse\nrelated\nsecurity\nboth\ncounty\namerican\nphoto\ngame\nmembers\npower\nwhile\ncare\nnetwork\ndown\ncomputer\nsystems\nthree\ntotal\nplace\nfollowing\ndownload\nwithout\naccess\nthink\nnorth\nresources\ncurrent\nposts\nmedia\ncontrol\nwater\nhistory\npictures\nsize\npersonal\nsince\nincluding\nguide\nshop\ndirectory\nboard\nlocation\nchange\nwhite\ntext\nsmall\nrating\nrate\ngovernment\nchildren\nduring\nreturn\nstudents\nshopping\naccount\ntimes\nsites\nlevel\ndigital\nprofile\nprevious\nform\nevents\nlove\njohn\nmain\ncall\nhours\nimage\ndepartment\ntitle\ndescription\ninsurance\nanother\nshall\nproperty\nclass\nstill\nmoney\nquality\nevery\nlisting\ncontent\ncountry\nprivate\nlittle\nvisit\nsave\ntools\nreply\ncustomer\ndecember\ncompare\nmovies\ninclude\ncollege\nvalue\narticle\nyork\ncard\njobs\nprovide\nfood\nsource\nauthor\ndifferent\npress\nlearn\nsale\naround\nprint\ncourse\ncanada\nprocess\nteen\nroom\nstock\ntraining\ncredit\npoint\njoin\nscience\ncategories\nadvanced\nwest\nsales\nlook\nenglish\nleft\nteam\nestate\nconditions\nselect\nwindows\nphotos\nthread\nweek\ncategory\nnote\nlive\nlarge\ngallery\ntable\nregister\nhowever\njune\noctober\nnovember\nmarket\nlibrary\nreally\naction\nstart\nseries\nmodel\nfeatures\nindustry\nplan\nhuman\nprovided\nrequired\nsecond\naccessories\ncost\nmovie\nforums\nmarch\nseptember\nbetter\nquestions\njuly\nyahoo\ngoing\nmedical\ntest\nfriend\ncome\nserver\nstudy\napplication\ncart\nstaff\narticles\nfeedback\nagain\nplay\nlooking\nissues\napril\nnever\nusers\ncomplete\nstreet\ntopic\ncomment\nfinancial\nthings\nworking\nagainst\nstandard\nperson\nbelow\nmobile\nless\nblog\nparty\npayment\nequipment\nlogin\nstudent\nprograms\noffers\nlegal\nabove\nrecent\npark\nstores\nside\nproblem\ngive\nmemory\nperformance\nsocial\naugust\nquote\nlanguage\nstory\nsell\noptions\nexperience\nrates\ncreate\nbody\nyoung\namerica\nimportant\nfield\neast\npaper\nsingle\nactivities\nclub\nexample\ngirls\nadditional\npassword\nlatest\nsomething\nroad\ngift\nquestion\nchanges\nnight\nhard\ntexas\nfour\npoker\nstatus\nbrowse\nissue\nrange\nbuilding\nseller\ncourt\nfebruary\nalways\nresult\naudio\nlight\nwrite\noffer\nblue\ngroups\neasy\ngiven\nfiles\nevent\nrelease\nanalysis\nrequest\nchina\nmaking\npicture\nneeds\npossible\nmight\nprofessional\nmonth\nmajor\nstar\nareas\nfuture\nspace\ncommittee\nhand\ncards\nproblems\nlondon\nwashington\nmeeting\nbecome\ninterest\nchild\nkeep\nenter\ncalifornia\nshare\nsimilar\ngarden\nschools\nmillion\nadded\nreference\ncompanies\nlisted\nbaby\nlearning\nenergy\ndelivery\npopular\nterm\nfilm\nstories\ncomputers\njournal\nreports\nwelcome\ncentral\nimages\npresident\nnotice\noriginal\nhead\nradio\nuntil\ncell\ncolor\nself\ncouncil\naway\nincludes\ntrack\naustralia\ndiscussion\narchive\nonce\nothers\nentertainment\nagreement\nformat\nleast\nsociety\nmonths\nsafety\nfriends\nsure\ntrade\nedition\ncars\nmessages\nmarketing\ntell\nfurther\nupdated\nassociation\nable\nhaving\nprovides\ndavid\nalready\ngreen\nstudies\nclose\ncommon\ndrive\nspecific\nseveral\ngold\nliving\ncollection\ncalled\nshort\narts\ndisplay\nlimited\npowered\nsolutions\nmeans\ndirector\ndail" <> ...
+```
+
 ```elixir
 String.split(words, ~r/\n/, trim: true)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+["that", "this", "with", "from", "your", "have", "more", "will", "home", "about", "page", "search",
+ "free", "other", "information", "time", "they", "site", "what", "which", "their", "news", "there",
+ "only", "when", "contact", "here", "business", "also", "help", "view", "online", "first", "been",
+ "would", "were", "services", "some", "these", "click", "like", "service", "than", "find", "price",
+ "date", "back", "people", "list", "name", ...]
 ```
 
 ```elixir
@@ -227,27 +267,37 @@ end
 words = Dictionary.word_list()
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+["that", "this", "with", "from", "your", "have", "more", "will", "home", "about", "page", "search",
+ "free", "other", "information", "time", "they", "site", "what", "which", "their", "news", "there",
+ "only", "when", "contact", "here", "business", "also", "help", "view", "online", "first", "been",
+ "would", "were", "services", "some", "these", "click", "like", "service", "than", "find", "price",
+ "date", "back", "people", "list", "name", ...]
+```
+
 ### lets now try to find a way to randomize the words, inside the list module
 
 <!-- livebook:{"force_markdown":true} -->
 
 ```elixir
 iex(4)> List.
-Chars                 ascii_printable?/1    ascii_printable?/2
-delete/2              delete_at/2           duplicate/2
-first/1               first/2               flatten/1
-flatten/2             foldl/3               foldr/3
-improper?/1           insert_at/3           keydelete/3
-keyfind!/3            keyfind/3             keyfind/4
-keymember?/3          keyreplace/4          keysort/2
-keysort/3             keystore/4            keytake/3
-last/1                last/2                myers_difference/2
-myers_difference/3    pop_at/2              pop_at/3
-replace_at/3          starts_with?/2        to_atom/1
-to_charlist/1         to_existing_atom/1    to_float/1
-to_integer/1          to_integer/2          to_string/1
-to_tuple/1            update_at/3           wrap/1
-zip/1
+Chars                 ascii_printable?/1    ascii_printable?/2    
+delete/2              delete_at/2           duplicate/2           
+first/1               first/2               flatten/1             
+flatten/2             foldl/3               foldr/3               
+improper?/1           insert_at/3           keydelete/3           
+keyfind!/3            keyfind/3             keyfind/4             
+keymember?/3          keyreplace/4          keysort/2             
+keysort/3             keystore/4            keytake/3             
+last/1                last/2                myers_difference/2    
+myers_difference/3    pop_at/2              pop_at/3              
+replace_at/3          starts_with?/2        to_atom/1             
+to_charlist/1         to_existing_atom/1    to_float/1            
+to_integer/1          to_integer/2          to_string/1           
+to_tuple/1            update_at/3           wrap/1                
+zip/1   
 ```
 
 #### unfortunately that did not work, but you can use an `Enum`
@@ -256,40 +306,40 @@ zip/1
 
 ```elixir
 iex(4)> Enum.
-EmptyError           OutOfBoundsError     all?/1
-all?/2               any?/1               any?/2
-at/2                 at/3                 chunk_by/2
-chunk_every/2        chunk_every/3        chunk_every/4
-chunk_while/4        concat/1             concat/2
-count/1              count/2              count_until/2
-count_until/3        dedup/1              dedup_by/2
-drop/2               drop_every/2         drop_while/2
-each/2               empty?/1             fetch!/2
-fetch/2              filter/2             find/2
-find/3               find_index/2         find_value/2
-find_value/3         flat_map/2           flat_map_reduce/3
-frequencies/1        frequencies_by/2     group_by/2
-group_by/3           intersperse/2        into/2
-into/3               join/1               join/2
-map/2                map_every/3          map_intersperse/3
-map_join/2           map_join/3           map_reduce/3
-max/3                max_by/2             max_by/4
-member?/2            min/3                min_by/2
-min_by/4             min_max/1            min_max/2
-min_max_by/2         min_max_by/4         product/1
-random/1             reduce/2             reduce/3
-reduce_while/3       reject/2             reverse/1
-reverse/2            reverse_slice/3      scan/2
-scan/3               shuffle/1            slice/2
-slice/3              slide/3              sort/1
-sort/2               sort_by/2            sort_by/3
-split/2              split_while/2        split_with/2
-sum/1                take/2               take_every/2
-take_random/2        take_while/2         to_list/1
-uniq/1               uniq_by/2            unzip/1
-with_index/1         with_index/2         zip/1
-zip/2                zip_reduce/3         zip_reduce/4
-zip_with/2           zip_with/3
+EmptyError           OutOfBoundsError     all?/1               
+all?/2               any?/1               any?/2               
+at/2                 at/3                 chunk_by/2           
+chunk_every/2        chunk_every/3        chunk_every/4        
+chunk_while/4        concat/1             concat/2             
+count/1              count/2              count_until/2        
+count_until/3        dedup/1              dedup_by/2           
+drop/2               drop_every/2         drop_while/2         
+each/2               empty?/1             fetch!/2             
+fetch/2              filter/2             find/2               
+find/3               find_index/2         find_value/2         
+find_value/3         flat_map/2           flat_map_reduce/3    
+frequencies/1        frequencies_by/2     group_by/2           
+group_by/3           intersperse/2        into/2               
+into/3               join/1               join/2               
+map/2                map_every/3          map_intersperse/3    
+map_join/2           map_join/3           map_reduce/3         
+max/3                max_by/2             max_by/4             
+member?/2            min/3                min_by/2             
+min_by/4             min_max/1            min_max/2            
+min_max_by/2         min_max_by/4         product/1            
+random/1             reduce/2             reduce/3             
+reduce_while/3       reject/2             reverse/1            
+reverse/2            reverse_slice/3      scan/2               
+scan/3               shuffle/1            slice/2              
+slice/3              slide/3              sort/1               
+sort/2               sort_by/2            sort_by/3            
+split/2              split_while/2        split_with/2         
+sum/1                take/2               take_every/2         
+take_random/2        take_while/2         to_list/1            
+uniq/1               uniq_by/2            unzip/1              
+with_index/1         with_index/2         zip/1                
+zip/2                zip_reduce/3         zip_reduce/4         
+zip_with/2           zip_with/3   
 ```
 
 <!-- livebook:{"break_markdown":true} -->
@@ -303,7 +353,7 @@ zip_with/2           zip_with/3
 ```elixir
 iex(4)> h Enum.random
 
-                             def random(enumerable)
+                             def random(enumerable)                             
 
   @spec random(t()) :: element()
 
@@ -347,12 +397,24 @@ from Erlang/OTP 22:
 Dictionary.random_word()
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+"monetary"
+```
+
 ## Section: EPIC0001
 
 ### There are two ways of specifying an atom in Elixir. The first is to prefix a name or an operator with a colon. Here are some atoms using that notation:
 
 ```elixir
 atoms = [:cat, :puppy_dog, :>=]
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:cat, :puppy_dog, :>=]
 ```
 
 ### Sometimes you need to create atoms that contain characters that aren't allowed in normal names. Do this by enclosing them in double quotes:
@@ -373,12 +435,382 @@ looped_atoms =
   end
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+*. atom name: :"cat-dog"
+*. is atom?: true
+
+*. atom name: :"now is the time"
+*. is atom?: true
+
+*. atom name: :"!@$%^&UIO"
+*. is atom?: true
+
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+[:ok, :ok, :ok]
+```
+
 ### This format also allows you to embed the result of evaluating code in your atom names:
 
 ```elixir
 a = 99
 ```
 
+<!-- livebook:{"output":true} -->
+
+```
+99
+```
+
 ```elixir
 :"next-number: #{a + 1}"
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+:"next-number: 100"
+```
+
+## Section: EPIC0003
+
+### Send & receive processes
+
+```elixir
+defmodule Procs do
+  def receiving(count) do
+    receive do
+      {:crash, reason} ->
+        exit(reason)
+
+      # we will quit without a recursive call
+      {:quit} ->
+        IO.inspect({:quit}, label: "Program quit")
+
+      # pattern matching recursively
+      {:add, n} ->
+        IO.inspect(receiving(count + n), label: "{:add, n}")
+
+      msg ->
+        IO.puts("#{count}: Hello #{inspect(msg)}")
+        # using tail recursion
+        receiving(count + 1)
+        receiving(count)
+    end
+  end
+end
+
+pid = spawn_link(Procs, :receiving, [0])
+# sending a message to the pid
+send(pid, "Hola")
+
+# to show our process ended
+send(pid, "Again")
+send(pid, [1, 2, 3])
+send(pid, 17.0)
+send(pid, :alias_one_11)
+
+# running a background process that is maintaining its own state
+send(pid, {:add, 17})
+send(pid, {:quit})
+
+# process should not be alive after :quit
+send(pid, {:crash, :normal})
+Process.alive?(pid)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+0: Hello "Hola"
+1: Hello "Again"
+2: Hello [1, 2, 3]
+3: Hello 17.0
+4: Hello :alias_one_11
+Program quit: {:quit}
+{:add, n}: {:quit}
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+true
+```
+
+### Using Agents instead of processes
+
+#### Agents in IEX
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(1)> h Agent.st
+start/1         start/2         start/3         start/4
+start_link/1    start_link/2    start_link/3    start_link/4
+stop/1          stop/2          stop/3
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Agent.start_link
+
+#### api's
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(1)> h Agent.start_link
+start_link/1    start_link/2    start_link/3    start_link/4
+```
+
+### API examples/references
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(1)> h Agent.start_link
+
+                       def start_link(fun, options \\ [])
+
+  @spec start_link((() -> term()), GenServer.options()) :: on_start()
+
+Starts an agent linked to the current process with the given function.
+
+This is often used to start the agent as part of a supervision tree.
+
+Once the agent is spawned, the given function fun is invoked in the server
+process, and should return the initial agent state. Note that start_link/2 does
+not return until the given function has returned.
+
+## Options
+
+The :name option is used for registration as described in the module
+documentation.
+
+If the :timeout option is present, the agent is allowed to spend at most the
+given number of milliseconds on initialization or it will be terminated and the
+start function will return {:error, :timeout}.
+
+If the :debug option is present, the corresponding function in the :sys module
+(:sys) will be invoked.
+
+If the :spawn_opt option is present, its value will be passed as options to the
+underlying process as in Process.spawn/4.
+
+## Return values
+
+If the server is successfully created and initialized, the function returns
+{:ok, pid}, where pid is the PID of the server. If an agent with the specified
+name already exists, the function returns {:error, {:already_started, pid}}
+with the PID of that process.
+
+If the given function callback fails, the function returns {:error, reason}.
+
+## Examples
+
+    iex> {:ok, pid} = Agent.start_link(fn -> 42 end)
+    iex> Agent.get(pid, fn state -> state end)
+    42
+
+    iex> {:error, {exception, _stacktrace}} = Agent.start(fn -> raise "oops" end)
+    iex> exception
+    %RuntimeError{message: "oops"}
+
+
+                def start_link(module, fun, args, options \\ [])
+
+  @spec start_link(module(), atom(), [any()], GenServer.options()) :: on_start()
+
+Starts an agent linked to the current process.
+
+Same as start_link/2 but a module, function, and arguments are expected instead
+of an anonymous function; fun in module will be called with the given arguments
+args to initialize the state.
+```
+
+##### We always use a function to manipulate the state inside of an `Agent`
+
+```elixir
+{:ok, counter} = Agent.start_link(fn -> 0 end)
+
+# Agent.get(counter, fn state -> state end)
+# # update->1
+# Agent.update(counter, fn state -> state + 1 end)
+# Agent.get(counter, fn state -> state end)
+# # update->2
+# Agent.update(counter, fn state -> state + 1 end)
+# Agent.get(counter, fn state -> state end)
+
+Agent.get_and_update(
+  counter,
+  fn state -> IO.inspect({state, state + 1}, label: "get_and_update") end
+)
+
+Agent.get_and_update(
+  counter,
+  fn state -> IO.inspect({state, state + 1}, label: "get_and_update") end
+)
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+get_and_update: {0, 1}
+get_and_update: {1, 2}
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+1
+```
+
+### Converting our dictionary api by way of refactoring it with `Agents`
+
+<img width="550" alt="Screenshot 2022-12-26 at 2 34 55 PM" src="https://user-images.githubusercontent.com/44812411/209578926-79faf300-8c95-4cc2-bc5d-831b75d6a71c.png" />
+
+<img width="550" alt="Screenshot 2022-12-26 at 2 40 35 PM" src="https://user-images.githubusercontent.com/44812411/209579114-a3ca7a30-ca01-48b3-90c2-ed679ec0c916.png" />
+
+<img width="550" alt="Screenshot 2022-12-26 at 2 39 53 PM" src="https://user-images.githubusercontent.com/44812411/209579117-41d519de-4c60-4eea-8b2b-b9e7274021c6.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### using our runtime Agent for the Dictionary API
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(1)> alias Dictionary.Runtime.Server
+Dictionary.Runtime.Server
+iex(2)> {:ok, pid} = Server.start_link
+{:ok, #PID<0.241.0>}
+iex(3)> 
+...
+iex(4)> Server.random_word(pid)
+"palm"
+iex(5)> Server.random_word(pid)
+"flame"
+iex(6)> Server.random_word(pid)
+"causes"
+iex(7)> Server.random_word(pid)
+"careful"
+iex(8)> Server.random_word(pid)
+"else"
+
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+### How we use the Dictionary API after adding our new `Agent`
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(1)> {:ok, pid} = Dictionary.start_link
+{:ok, #PID<0.262.0>}
+...
+iex(2)> Dictionary.random_word(pid)
+"sought"
+iex(3)> Dictionary.random_word(pid)
+"labs"
+iex(4)> Dictionary.random_word(pid)
+"taught"
+iex(5)> Dictionary.random_word(pid)
+"security"
+iex(6)> Dictionary.random_word(pid)
+"antibodies"
+
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+### Our next steps... Converting our Dictionary library into an `Application`
+
+<img width="550" alt="Screenshot 2022-12-26 at 4 15 12 PM" src="https://user-images.githubusercontent.com/44812411/209583732-87cc2e0c-e23e-407e-abf7-2fb49db93a89.png" />
+
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/44812411/209583735-ef3b911b-ad34-4207-9c99-29bd46baa087.png" />
+
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 03 PM" src="https://user-images.githubusercontent.com/44812411/209583736-361064bf-a128-4ba8-adb0-8866874606bd.png" />
+
+## Section: EPIC0004
+
+### Project summary up to this point
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 00 30 PM" src="https://user-images.githubusercontent.com/44812411/209716756-3a880a8d-3018-4df5-b9cc-64206c08727d.png" />
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 06 40 PM" src="https://user-images.githubusercontent.com/44812411/209717207-ddb1dc5e-7060-4f59-9d26-a906d9f3df8a.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### GenServer is a wrapper for any server:
+
+* `GenServer` **is an abstraction that allows us to run code without having to deal with all of the details like:**
+    * *__Life-cycle management__*
+    * *__Timeouts__*
+    * *__Timeouts__*
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 08 20 PM" src="https://user-images.githubusercontent.com/44812411/209717854-bf377693-4bdd-4783-aff3-2a499a3b485c.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### The `Gen` in `GenServer` stands for *`Generic`* that will `wrap` any *`server`* in the `elixir` *world*
+
+---
+
+___
+
+> #### __Its an __*`abstraction`*__, simlar to how `Enum` is an `abstraction` to a _`collection`_ & `Agents` are an `abstraction` over a `process/server` that _`holds state`___
+
+> > * __A `GenServer` has to `distinct API's`, because just like the _`Agent`_, it has a `process` on the _`client`_ for the `Agent` that uses it but it also has `code` that uses it in the _`server processes`___
+
+> > * __These two `pieces of code` will `communicate` via `messages` but live in _`two different environments (Agent vs GenServer)`_, so the API's are quite distinct.__
+
+> > * <img width="750" alt="Screenshot 2022-12-27 at 3 40 03 PM" src="https://user-images.githubusercontent.com/44812411/209720109-31e0a7e4-9722-406e-8fcf-dd5cac53f24d.png">
+
+<!-- livebook:{"break_markdown":true} -->
+
+### An example on the implementation
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 44 06 PM" src="https://user-images.githubusercontent.com/44812411/209720364-63fb1974-e04c-492d-a9e3-192c7f8780e1.png" />
+
+```elixir
+import IEx.Helpers
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+IEx.Helpers
+```
+
+```elixir
+h(Enum.map())
+```
+
+<!-- livebook:{"output":true} -->
+
+```
+
+                            def map(enumerable, fun)                            
+
+  @spec map(t(), (element() -> any())) :: list()
+
+Returns a list where each element is the result of invoking fun on each
+corresponding element of enumerable.
+
+For maps, the function expects a key-value tuple.
+
+## Examples
+
+    iex> Enum.map([1, 2, 3], fn x -> x * 2 end)
+    [2, 4, 6]
+    
+    iex> Enum.map([a: 1, b: 2], fn {k, v} -> {k, -v} end)
+    [a: -1, b: -2]
+
 ```

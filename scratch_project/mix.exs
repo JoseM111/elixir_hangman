@@ -1,11 +1,14 @@
-defmodule Hangman.MixProject do
+defmodule ScratchProject.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :hangman,
+      app: :scratch_project,
       version: "0.1.0",
       elixir: "~> 1.14",
+      elixirc_options: [
+        debug_info: Mix.env() == :dev
+      ],
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       aliases: aliases()
@@ -15,7 +18,6 @@ defmodule Hangman.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      mod: { Hangman.Runtime.Application, [ ] },
       extra_applications: [ :logger ]
     ]
   end
@@ -23,15 +25,14 @@ defmodule Hangman.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      { :dictionary, path: "../dictionary" },
-      { :dialyxir, "~> 1.2", only: [ :dev ], runtime: false }
+      # {:dep_from_hexpm, "~> 0.3.0"},
+      # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
     ]
   end
 
-  defp aliases do
+  def aliases do
     [
-      setup: "deps.get",
-      test: "test --cover",
+      setup: [ "dep.get" ]
     ]
   end
 end

@@ -1,0 +1,38 @@
+<component name="ProjectCodeStyleConfiguration">
+  <code_scheme name="Project" version="173">
+    <ElixirCodeStyleSettings>
+      <option name="ALIGN_TYPE_DEFINITION_TO_RIGHT_OF_OPERATOR" value="false" />
+      <option name="MIX_FORMAT" value="false" />
+      <option name="SPACE_WITHIN_BITS" value="true" />
+    </ElixirCodeStyleSettings>
+    <JavaCodeStyleSettings>
+      <option name="SPACE_AFTER_CLOSING_ANGLE_BRACKET_IN_TYPE_ARGUMENT" value="true" />
+      <option name="CLASS_COUNT_TO_USE_IMPORT_ON_DEMAND" value="4" />
+      <option name="NAMES_COUNT_TO_USE_IMPORT_ON_DEMAND" value="1" />
+    </JavaCodeStyleSettings>
+    <ScalaCodeStyleSettings>
+      <option name="MULTILINE_STRING_CLOSING_QUOTES_ON_NEW_LINE" value="true" />
+    </ScalaCodeStyleSettings>
+    <XML>
+      <option name="XML_SPACE_INSIDE_EMPTY_TAG" value="true" />
+    </XML>
+    <codeStyleSettings language="Elixir">
+      <option name="SPACE_WITHIN_BRACKETS" value="true" />
+      <option name="SPACE_WITHIN_BRACES" value="true" />
+    </codeStyleSettings>
+    <codeStyleSettings language="JAVA">
+      <option name="SPACE_BEFORE_ARRAY_INITIALIZER_LBRACE" value="true" />
+      <option name="SPACE_BEFORE_ANNOTATION_ARRAY_INITIALIZER_LBRACE" value="true" />
+      <option name="SPACE_WITHIN_ANNOTATION_PARENTHESES" value="true" />
+      <indentOptions>
+        <option name="KEEP_INDENTS_ON_EMPTY_LINES" value="true" />
+      </indentOptions>
+      <arrangement>
+        <groups />
+      </arrangement>
+    </codeStyleSettings>
+    <codeStyleSettings language="XML">
+      <option name="BLOCK_COMMENT_ADD_SPACE" value="true" />
+    </codeStyleSettings>
+  </code_scheme>
+</component>

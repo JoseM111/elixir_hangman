@@ -1,7 +1,10 @@
 # Hangman notebook
 
 ```elixir
-Dictionary
+import IEx.Helpers
+import IEx.Autocomplete
+import IEx.History
+import IEx.Info
 ```
 
 ## Section MAIN:
@@ -547,11 +550,11 @@ Agent.get_and_update(
 
 ### Converting our dictionary api by way of refactoring it with `Agents`
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 34 55 PM" src="https://user-images.githubusercontent.com/44812411/209578926-79faf300-8c95-4cc2-bc5d-831b75d6a71c.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 34 55 PM" src="https://user-images.githubusercontent.com/44812411/209578926-79faf300-8c95-4cc2-bc5d-831b75d6a71c.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 40 35 PM" src="https://user-images.githubusercontent.com/44812411/209579114-a3ca7a30-ca01-48b3-90c2-ed679ec0c916.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 40 35 PM" src="https://user-images.githubusercontent.com/44812411/209579114-a3ca7a30-ca01-48b3-90c2-ed679ec0c916.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 2 39 53 PM" src="https://user-images.githubusercontent.com/44812411/209579117-41d519de-4c60-4eea-8b2b-b9e7274021c6.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 2 39 53 PM" src="https://user-images.githubusercontent.com/44812411/209579117-41d519de-4c60-4eea-8b2b-b9e7274021c6.png" />
 
 <!-- livebook:{"break_markdown":true} -->
 
@@ -606,8 +609,210 @@ iex(6)> Dictionary.random_word(pid)
 
 ### Our next steps... Converting our Dictionary library into an `Application`
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 15 12 PM" src="https://user-images.githubusercontent.com/44812411/209583732-87cc2e0c-e23e-407e-abf7-2fb49db93a89.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 15 12 PM" src="https://user-images.githubusercontent.com/44812411/209583732-87cc2e0c-e23e-407e-abf7-2fb49db93a89.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/44812411/209583735-ef3b911b-ad34-4207-9c99-29bd46baa087.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 52 PM" src="https://user-images.githubusercontent.com/44812411/209583735-ef3b911b-ad34-4207-9c99-29bd46baa087.png" />
 
-<img width="750" alt="Screenshot 2022-12-26 at 4 14 03 PM" src="https://user-images.githubusercontent.com/44812411/209583736-361064bf-a128-4ba8-adb0-8866874606bd.png" />
+<img width="550" alt="Screenshot 2022-12-26 at 4 14 03 PM" src="https://user-images.githubusercontent.com/44812411/209583736-361064bf-a128-4ba8-adb0-8866874606bd.png" />
+
+## Section: EPIC0004
+
+### Project summary up to this point
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 00 30 PM" src="https://user-images.githubusercontent.com/44812411/209716756-3a880a8d-3018-4df5-b9cc-64206c08727d.png" />
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 06 40 PM" src="https://user-images.githubusercontent.com/44812411/209717207-ddb1dc5e-7060-4f59-9d26-a906d9f3df8a.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### GenServer is a wrapper for any server:
+
+* `GenServer` **is an abstraction that allows us to run code without having to deal with all of the details like:**
+  * *__Life-cycle management__*
+  * *__Timeouts__*
+  * *__Timeouts__*
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 08 20 PM" src="https://user-images.githubusercontent.com/44812411/209717854-bf377693-4bdd-4783-aff3-2a499a3b485c.png" />
+
+<!-- livebook:{"break_markdown":true} -->
+
+### The `Gen` in `GenServer` stands for *`Generic`* that will `wrap` any *`server`* in the `elixir` *world*
+
+---
+
+___
+
+> #### __Its an __*`abstraction`*__, simlar to how `Enum` is an `abstraction` to a _`collection`_ & `Agents` are an `abstraction` over a `process/server` that _`holds state`___
+
+> > * __A `GenServer` has to `distinct API's`, because just like the _`Agent`_, it has a `process` on the _`client`_ for the `Agent` that uses it but it also has `code` that uses it in the _`server processes`___
+
+> > * __These two `pieces of code` will `communicate` via `messages` but live in _`two different environments (Agent vs GenServer)`_, so the API's are quite distinct.__
+
+> > * <img width="750" alt="Screenshot 2022-12-27 at 3 40 03 PM" src="https://user-images.githubusercontent.com/44812411/209720109-31e0a7e4-9722-406e-8fcf-dd5cac53f24d.png">
+
+<!-- livebook:{"break_markdown":true} -->
+
+### An example on the implementation
+
+<img width="750" alt="Screenshot 2022-12-27 at 3 44 06 PM" src="https://user-images.githubusercontent.com/44812411/209720364-63fb1974-e04c-492d-a9e3-192c7f8780e1.png" />
+
+```elixir
+h(GenServer)
+```
+
+### How we used it in `IEx`
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+iex(2)> game = Hangman.new_game
+#PID<0.232.0>
+iex(3)> Hangman.make_move(game, "a")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "_", "_", "_", "_"],
+  turns_left: 6,
+  used: ["a"]
+}
+iex(4)> Hangman.make_move(game, "d")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 6,
+  used: ["a", "d"]
+}
+iex(5)> Hangman.make_move(game, "l")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "l"]
+}
+iex(6)> Hangman.make_move(game, "a")
+%{
+  game_state: :already_used,
+  letters: ["_", "_", "_", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "l"]
+}
+iex(7)> Hangman.make_move(game, "i")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 5,
+  used: ["a", "d", "i", "l"]
+}
+iex(8)> Hangman.make_move(game, "p")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 4,
+  used: ["a", "d", "i", "l", "p"]
+}
+iex(9)> Hangman.make_move(game, "s")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "_", "d"],
+  turns_left: 3,
+  used: ["a", "d", "i", "l", "p", "s"]
+}
+iex(10)> Hangman.make_move(game, "e")
+%{
+  game_state: :good_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 3,
+  used: ["a", "d", "e", "i", "l", "p", "s"]
+}
+iex(11)> Hangman.make_move(game, "f")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 2,
+  used: ["a", "d", "e", "f", "i", "l", "p", "s"]
+}
+iex(12)> Hangman.make_move(game, "u")
+%{
+  game_state: :bad_guess,
+  letters: ["_", "_", "i", "_", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "l", "p", "s", "u"]
+}
+iex(13)> Hangman.make_move(game, "j")
+%{
+  game_state: :good_guess,
+  letters: ["j", "_", "i", "_", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "p", "s", "u"]
+}
+iex(14)> Hangman.make_move(game, "n")
+%{
+  game_state: :good_guess,
+  letters: ["j", "_", "i", "n", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "n", "p", "s", "u"]
+}
+iex(15)> Hangman.make_move(game, "o")
+%{
+  game_state: :won,
+  letters: ["j", "o", "i", "n", "e", "d"],
+  turns_left: 1,
+  used: ["a", "d", "e", "f", "i", "j", "l", "n", "o", "p", "s", "u"]
+}
+```
+
+<!-- livebook:{"break_markdown":true} -->
+
+### `Nodes` and `Distributed` Elixir
+
+#### Specifying the `nodes` names
+
+> > Short names are specified using just the node's name. The host name of the machine running the node will be added by the runtime
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+$ mix --sname node1
+```
+
+> > Long names include the fully qualified domain name or IP address of the box:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+$ mix --name node1@quarry.bedrock.com
+```
+
+> > ___
+
+<!-- livebook:{"break_markdown":true} -->
+
+#### Naming a `PID`
+
+> > The low-level way to associate a name with a PID is:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+Process.register(pid, :name)
+```
+
+> > Once this connection is made, you can use the name when sending messages to the pid:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+pid = spawn . . .
+Process.register(pid, :my_process)
+
+send(pid, :hello)
+# is the same as...
+send(:my_process, :hello)
+```
+
+> > You can send to a process on another node by using a tuple containing the process name and node name in place of the simple pid:
+
+<!-- livebook:{"force_markdown":true} -->
+
+```elixir
+send( { :my_process, :node1@quarry }, :hello )
+```
