@@ -5,5 +5,8 @@
     <option name="search" value="" />
     <option name="tryString" value="C:\dir\blah\meh\file.ext" />
   </component>
-  <component name="ProjectRootManager" version="2" project-jdk-name="RVM: ruby-2.6.5" project-jdk-type="RUBY_SDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_19" project-jdk-name="Elixir 1.14.2-otp-25" project-jdk-type="Elixir SDK" />
+  <component name="ProjectType">
+    <option name="id" value="jpab" />
+  </component>
 </project>
