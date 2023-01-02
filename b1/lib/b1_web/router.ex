@@ -2,16 +2,16 @@ defmodule B1Web.Router do
   use B1Web, :router
 
   pipeline :browser do
-    plug :accepts, ["html"]
+    plug :accepts, [ "html" ]
     plug :fetch_session
     plug :fetch_live_flash
-    plug :put_root_layout, {B1Web.LayoutView, :root}
+    plug :put_root_layout, { B1Web.LayoutView, :root }
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end
 
   pipeline :api do
-    plug :accepts, ["json"]
+    plug :accepts, [ "json" ]
   end
 
   scope "/hangman", B1Web do
@@ -20,6 +20,8 @@ defmodule B1Web.Router do
     get "/", HangmanController, :index
     post "/", HangmanController, :new
     put "/", HangmanController, :update
+    # redirect
+    get "/current", HangmanController, :show
   end
 
   # Other scopes may use custom stacks.
@@ -27,3 +29,16 @@ defmodule B1Web.Router do
   #   pipe_through :api
   # end
 end
+
+
+
+
+
+
+
+
+
+
+
+
+

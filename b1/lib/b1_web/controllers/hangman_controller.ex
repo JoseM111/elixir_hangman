@@ -8,12 +8,10 @@ defmodule B1Web.HangmanController do
   def new(conn, _params) do
     # creates pid
     game = Hangman.new_game()
-    # store the tally
-    tally = Hangman.get_tally(game)
 
     conn
     |> put_session(:game, game)
-    |> render("game.html", tally: tally)
+    |> redirect(to: Routes.hangman_path(conn, :show))
 
     #    # cookie for session request
     #    # Puts the specified in the session for the given .
@@ -24,17 +22,15 @@ defmodule B1Web.HangmanController do
   end
 
   def update(conn, params) do
-    #
+    # "make_move" => %{"guess" => "k"}
     guess = params[ "make_move" ][ "guess" ]
 
-    tally =
-      conn
-      |> get_session(:game)
-      |> Hangman.make_move(guess)
-
+    # passes conn down the pipeline
     put_in(conn.params[ "make_move" ][ "guess" ], "")
-    |> render("game.html", tally: tally)
+    |> get_session(:game)
+    |> Hangman.make_move(guess)
 
+    redirect(conn, to: Routes.hangman_path(conn, :show))
     #    # getting the game session from
     #    # the `put_session(conn, :game, game)`
     #    game = get_session(conn, :game)
@@ -45,7 +41,28 @@ defmodule B1Web.HangmanController do
     #
     #    render(conn, "game.html", tally: tally)
   end
+
+  def show(conn, _params) do
+    tally =
+      conn
+      |> get_session(:game)
+      |> Hangman.get_tally()
+
+    render(conn, "game.html", tally: tally)
+  end
 end
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
