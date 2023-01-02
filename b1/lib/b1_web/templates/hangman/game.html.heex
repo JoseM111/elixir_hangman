@@ -1,0 +1,20 @@
+<div id="game" class="row">
+  <div class="column">
+    <!-- Shows the stick figure -->
+    <pre>
+      <%= figure_for(@tally.turns_left) %>
+    </pre>
+  </div>
+
+  <div class="column">
+    <!-- table for the game -->
+    <%= render("_tally_info.html", tally: @tally) %>
+    <!-- game status ui
+    `raw`: Marks the given content as raw. This means any
+     HTML code inside the given string won't be escaped
+    -->
+    <%= move_status(@tally.game_state) |> raw() %>
+    <!-- conditionally rendering -->
+    <%= continue_or_try_again(@conn, @tally.game_state) %>
+  </div>
+</div>

@@ -7,17 +7,17 @@ defmodule TextClient.Impl.Player do
   @type tally :: Hangman.tally
   @type state :: { game, tally }
   ##############################################################
-  
-  @spec start() :: :ok
-  def start() do
+
+  @spec start(game) :: :ok
+  def start(game) do
     # getting a game
     game = Hangman.new_game()
     tally = Hangman.get_tally(game)
     interact({ game, tally })
   end
-  
+
   ##############################################################
-  
+
   @doc """
   @type state ::
           :initializing
@@ -31,7 +31,7 @@ defmodule TextClient.Impl.Player do
   def interact({ _game, _tally = %{ game_state: :won } }) do
     IO.puts("Congratulations. You won!")
   end
-  
+
   def interact({ _game, tally = %{ game_state: :lost } }) do
     IO.puts(
       "Sorry. You lost... the word was #{
@@ -40,7 +40,7 @@ defmodule TextClient.Impl.Player do
       }"
     )
   end
-  
+
   # this last case handles just a normal move in the game
   def interact({ game, tally }) do
     # feedback
@@ -48,15 +48,15 @@ defmodule TextClient.Impl.Player do
     # display current word
     IO.puts(current_word(tally))
     # get next guess
-    
+
     # make a move
-    Hangman.make_move(game, get_guess())
+    tally = Hangman.make_move(game, get_guess())
     # passing the arguments into interact of the updated state
-    |> interact()
+    interact({ game, tally })
   end
-  
+
   ##############################################################
-  
+
   def feedback_for(tally) do
     case tally do
       %{ game_state: :initializing } -> "Welcome! I'm thinking of a #{
@@ -85,9 +85,9 @@ defmodule TextClient.Impl.Player do
   #  def feedback_for(%{ game_state: :already_used }) do
   #    _feedback_response = "You've already guessed that letter"
   #  end
-  
+
   ##############################################################
-  
+
   def current_word(tally) do
     _word_response = [
       "Word so far: ",
@@ -101,9 +101,9 @@ defmodule TextClient.Impl.Player do
       |> Enum.join(",")
     ]
   end
-  
+
   ##############################################################
-  
+
   def get_guess() do
     # need to fetch a string
     # prompt to enter the next letter
