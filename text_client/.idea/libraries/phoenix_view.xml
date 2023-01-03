@@ -2,9 +2,15 @@
   <library name="phoenix_view" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_view/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_view/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_view/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_view/lib" />
     </SOURCES>
   </library>

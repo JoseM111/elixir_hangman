@@ -2,9 +2,15 @@
   <library name="plug_cowboy" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_cowboy/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_cowboy/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_cowboy/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_cowboy/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_cowboy/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/plug_cowboy/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/plug_cowboy/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/plug_cowboy/lib" />
     </SOURCES>
   </library>

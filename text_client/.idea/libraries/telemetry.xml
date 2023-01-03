@@ -2,9 +2,15 @@
   <library name="telemetry" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/telemetry/src" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/telemetry/src" />
       <root url="file://$PROJECT_DIR$/../b1/deps/telemetry/src" />
     </SOURCES>
   </library>
