@@ -6,10 +6,25 @@
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
       <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry_poller/ebin" />
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/telemetry_poller/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/telemetry_poller/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../b1/deps/telemetry_poller/src" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/telemetry_poller/src" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/telemetry_poller/src" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/telemetry_poller/src" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/telemetry_poller/src" />
       <root url="file://$PROJECT_DIR$/../memory/deps/telemetry_poller/src" />
       <root url="file://$PROJECT_DIR$/../b1/deps/telemetry_poller/src" />
     </SOURCES>

@@ -6,11 +6,30 @@
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
       <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix/ebin" />
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/priv" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/phoenix/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/phoenix/priv" />
       <root url="file://$PROJECT_DIR$/../memory/deps/phoenix/lib" />
       <root url="file://$PROJECT_DIR$/../memory/deps/phoenix/priv" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix/lib" />
