@@ -5,6 +5,18 @@
     <SOURCES>
       <root url="file://$PROJECT_DIR$/../b1/deps/floki/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/floki/src" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/floki/src" />
     </SOURCES>
   </library>
 </component>

@@ -2,9 +2,36 @@
   <library name="phoenix_live_view" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_live_view/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_live_view/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/phoenix_live_view/priv" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_live_view/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_live_view/priv" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_live_view/priv" />
     </SOURCES>

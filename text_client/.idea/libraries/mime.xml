@@ -2,9 +2,30 @@
   <library name="mime" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/mime/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/mime/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/mime/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/mime/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/mime/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/mime/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/mime/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/mime/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/mime/lib" />
     </SOURCES>
   </library>

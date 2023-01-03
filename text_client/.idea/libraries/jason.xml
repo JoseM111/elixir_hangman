@@ -2,9 +2,30 @@
   <library name="jason" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/jason/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/jason/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/jason/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/jason/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/jason/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/jason/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/jason/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/jason/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/jason/lib" />
     </SOURCES>
   </library>

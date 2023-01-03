@@ -2,9 +2,30 @@
   <library name="phoenix_template" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/phoenix_template/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/phoenix_template/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/phoenix_template/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/phoenix_template/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/phoenix_template/lib" />
     </SOURCES>
   </library>

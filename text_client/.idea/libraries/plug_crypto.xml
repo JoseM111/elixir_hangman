@@ -2,9 +2,30 @@
   <library name="plug_crypto" type="mix">
     <CLASSES>
       <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b2/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../memory/_build/dev/lib/plug_crypto/ebin" />
+      <root url="file://$PROJECT_DIR$/../b1/_build/dev/lib/plug_crypto/ebin" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
+      <root url="file://$PROJECT_DIR$/../b1/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/../b1/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/../b2/deps/plug_crypto/lib" />
+      <root url="file://$PROJECT_DIR$/../memory/deps/plug_crypto/lib" />
       <root url="file://$PROJECT_DIR$/../b1/deps/plug_crypto/lib" />
     </SOURCES>
   </library>
